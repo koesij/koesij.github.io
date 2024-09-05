@@ -21,7 +21,7 @@ title                    : "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jiseok Song"
-description              : "The breaking of a wave cannot explain the whole sea."
+description              : ""
 url                      : "https://koesij.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Jiseok Song"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "The breaking of a wave cannot explain the whole sea."
+  location         : "Seoul, Korea"
+  email            : "chad0723@cau.ac.kr, chadsong123@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
