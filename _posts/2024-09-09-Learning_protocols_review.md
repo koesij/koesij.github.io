@@ -96,6 +96,7 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 ### Active Particle of Variable Activity in a Trap of Variable Stiffness
 
 #### Active Brownian particle confined by a two-dimensional harmonic potential
+
 $$
 \text{equation of motion:}
 \\
