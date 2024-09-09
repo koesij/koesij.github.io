@@ -13,8 +13,8 @@ main:
 
 
 
-counts:
-  - title: "Category"
-    use: true
-  - title: "Tag"
-    use: False
+# counts:
+#   - title: "Category"
+#     use: true
+#   - title: "Tag"
+#     use: False

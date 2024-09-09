@@ -4,8 +4,6 @@ title: "Paper review: Learning protocols for the fast and efficient control of a
 categories: ["physics read"]
 use_math: true
 author_profile: false
-sidebar:
-    nav: "counts
 ---
 
 ## Coneel Casert, Stephen Whitelam$^\dagger$
