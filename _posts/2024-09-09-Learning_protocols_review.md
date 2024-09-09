@@ -22,9 +22,6 @@ $$
 \braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
 $$
 
-
-
-
 $$
 \text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:
 \\
@@ -32,6 +29,7 @@ $$
 +\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)\\\\
 x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}
 $$
+
 The first line: passive heat (- change in energy + work done by changing the trap stiffness)
 
 The second line: active contribution
@@ -48,6 +46,7 @@ $$
 ##### Part 1
 
 The neural network outputs $\alpha(t)$ for given input $t$ at fixed $t_f$. It is trained to minimize the order parameter.
+
 $$
 \text{order parameter: }\phi =\braket{Q}\\
 \text{optimizer: genetic algorithm}\\
@@ -63,6 +62,7 @@ However, when control parameters change sharply at the final moment, **the syste
 ##### Part 2
 
 Therefore the constraint called **State-to-State Transformation (SST)** is introduced. This constraint guarentees that the system reaches the final steady state and accounts for all the heat involved in the process, rather than only focusing on minimizing the heat up to the point of the final parameter change.
+
 $$
 \text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}  \\
 \text{optimizer: genetic algorithm}\\
@@ -94,12 +94,14 @@ $$
 $$
 
 Dimensionless version
+
 $$
 \frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
 \frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)
 \\\\
 \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
+
 The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi)$ of the system dependes only on $r\equiv|\boldsymbol{r}|$ and $\chi \equiv \theta-\phi$, and is known exactly Kanaya Malakar, Arghya Das, Anupam Kundu, K. Vijay Kumar, and Abhishek Dhar, “Steady state of an active Brownian particle in a two-dimensional harmonic trap,” Physical Review E 101, 022610 (2020).
 
 
@@ -117,9 +119,11 @@ The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$. **It i
 ##### Part 2
 
 The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$ at given $t_f=0.44$. **It is trained to minimize mean work.** The order parameters are set similarly to those in the case of the active particle discussed in part 2.
+
 $$
 \text{Mean work: }\braket{W}=\int^{t_f}_0dt\dot{\kappa}\braket{\frac{\partial U}{\partial \kappa}}=\frac{1}{2}\int^{t_f}_0dt\dot{\kappa}\braket{r^2}
 $$
+
 **Result:** The neural network was able to **extract net work** during the state-to-state transformation, achieving a protocol where the mean work was negative, meaning more work was extracted than input. **In comparison, the theoretical protocol was not able to reach negative net work.**
 
 
@@ -146,6 +150,7 @@ $$
 \text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}\\
 R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
 $$
+
 **No analytical solutions are known for this many-body system**, but a protocol can be learned in exactly the same way as for the single-particle problems considered previously, using a genetic algorithm to train a neural network to minimize $\phi=\braket{W}$.
 
 #### Neural Network
