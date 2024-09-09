@@ -16,6 +16,7 @@ use_math: true
 #### Single active Ornstein-Uhlenbeck particle
 
 $$
+
 \text{Equation of motion: }\\
 \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)\\\\
 \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: \\
@@ -133,6 +134,7 @@ $$
 
 
 $$
+
 \text{Equation of motion (i-th particle evolves according to the Langevin equation):}\\
 \frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)\\
 \frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)\\\\
@@ -140,6 +142,7 @@ V(x)\text{ is the inter-particle potential:}\\
 V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)\\
 0 & (\text{otherwise}) \end{cases}\\
 r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
+
 $$
 
 
