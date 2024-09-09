@@ -98,12 +98,12 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 $$
 \text{equation of motion:}
 \\
-\frac{d \mathbf{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \mathbf{\rho}+\sqrt{2D_t}\mathbf{\xi}_r(\tau),
+\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),
 \\
 \frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)
 \\
 \\
-\text{position vector: }\mathbf{\rho}=(\rho cos\phi, \rho sin\phi)
+\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)
 \\
 \text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
 $$
