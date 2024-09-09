@@ -118,7 +118,7 @@ $$
 \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
 
-The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi)$ of the system dependes only on $r\equiv|\boldsymbol{r}|$ and $\chi \equiv \theta-\phi$, and is known exactly Kanaya Malakar, Arghya Das, Anupam Kundu, K. Vijay Kumar, and Abhishek Dhar, “Steady state of an active Brownian particle in a two-dimensional harmonic trap,” Physical Review E 101, 022610 (2020).
+The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi)$ of the system dependes only on $r\equiv \left|\boldsymbol{r}\right|$ and $\chi \equiv \theta-\phi$, and is known exactly Kanaya Malakar, Arghya Das, Anupam Kundu, K. Vijay Kumar, and Abhishek Dhar, “Steady state of an active Brownian particle in a two-dimensional harmonic trap,” Physical Review E 101, 022610 (2020).
 
 
 
