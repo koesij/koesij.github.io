@@ -6,7 +6,7 @@ use_math: true
 author_profile: false
 ---
 
-## Coneel Casert, Stephen Whitelam$^\dagger$
+## Coneel Casert, Stephen Whitelam
 
 ### Abstract
 
