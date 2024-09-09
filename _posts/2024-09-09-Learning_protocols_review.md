@@ -100,23 +100,17 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 $$
 \text{equation of motion:}
 \\
-\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),
-\\
-\frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)
-\\
-\\
-\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)
-\\
+\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),\\
+\frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)\\\\
+\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)\\
 \text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
 $$
 
 Dimensionless version
 
 $$
-\frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
-\frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)
-\\
-\\
+\frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t\\
+\frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)\\\\
 \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
 
@@ -153,25 +147,17 @@ $$
 
 
 $$
-\text{Equation of motion (i-th particle evolves according to the Langevin equation):}
-\\
-\frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)
-\\
-\frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)
-\\
-\\
-V(x)\text{ is the inter-particle potential:}
-\\
-V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)
-\\
-0 & (\text{otherwise}) \end{cases}
-\\
+\text{Equation of motion (i-th particle evolves according to the Langevin equation):}\\
+\frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)\\
+\frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)\\\\
+V(x)\text{ is the inter-particle potential:}\\
+V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)\\
+0 & (\text{otherwise}) \end{cases}\\
 r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
 $$
 
 $$
-\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}
-\\
+\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}\\
 R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
 $$
 
