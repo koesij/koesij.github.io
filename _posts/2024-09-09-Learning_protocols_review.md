@@ -15,27 +15,25 @@ use_math: true
 
 #### Single active Ornstein-Uhlenbeck particle
 
-
-$$\text{Equation of motion: }$$
-
-
-
-$$\\
+$$
+\text{Equation of motion: }
+\\
 \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)
 \\
 \\
 \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: 
 \\
-\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}$$
+\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
+$$
 
 
 $$
 \text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:
 \\
 \braket{Q}=\frac{1}{2}(\alpha_ix_i-\alpha_fx_f)+\frac{1}{2}\int^{t_f}_0 dt\dot \alpha(t)x(t) \\
-+\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)\\\\
++\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)
+\\\\
 x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}
-
 $$
 
 The first line: passive heat (- change in energy + work done by changing the trap stiffness)
@@ -43,12 +41,12 @@ The first line: passive heat (- change in energy + work done by changing the tra
 The second line: active contribution
 
 
-$$\text{The steady state values of the system's position and velocity for the final trap stiffness:}
+$$
+\text{The steady state values of the system's position and velocity for the final trap stiffness:}
 \\
 
 x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
 $$
-
 
 #### Neural Network
 
@@ -89,7 +87,6 @@ $$
 c=100
 $$
 
-
 The modified order parameter **ensures that the Neural Network’s protocol drives the particle to the steady state corresponding to  $\alpha_f$** . Once this is achieved, the Neural Network then learns to minimize the heat among all protocols that satisfy the SST constraint.
 
 **Result:** The protocol learned by the neural network produced significantly **less heat** compared to the protocol derived from the theoretical framework proposed by “Luke K. Davis et al.”
@@ -99,7 +96,6 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 ### Active Particle of Variable Activity in a Trap of Variable Stiffness
 
 #### Active Brownian particle confined by a two-dimensional harmonic potential
-
 $$
 \text{equation of motion:}
 \\
@@ -155,7 +151,6 @@ $$
 
 
 
-
 $$
 \text{Equation of motion (i-th particle evolves according to the Langevin equation):}
 \\
@@ -172,7 +167,6 @@ V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6
 \\
 r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
 $$
-
 
 $$
 \text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}
