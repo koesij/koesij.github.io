@@ -73,17 +73,15 @@ However, when control parameters change sharply at the final moment, **the syste
 Therefore the constraint called **State-to-State Transformation (SST)** is introduced. This constraint guarentees that the system reaches the final steady state and accounts for all the heat involved in the process, rather than only focusing on minimizing the heat up to the point of the final parameter change.
 
 $$
-\text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}  
+\text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}
 \\
 \text{optimizer: genetic algorithm}
 \\
-\text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f\\
-\\
+\text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f\\\\
 
 \Delta^2\equiv(x_f-x_{ss})^2+(y_f-y_{ss})^2
 \\
-\text{tolerance with which we wish to achieve this steady state: }\Delta_0=10^{-3}
-\\
+\text{tolerance with which we wish to achieve this steady state: }\Delta_0=10^{-3}\\
 c=100
 $$
 
@@ -100,17 +98,23 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 $$
 \text{equation of motion:}
 \\
-\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),\\
-\frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)\\\\
-\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)\\
+\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),
+\\
+\frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)
+\\
+\\
+\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)
+\\
 \text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
 $$
 
 Dimensionless version
 
 $$
-\frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t\\
-\frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)\\\\
+\frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
+\frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)
+\\
+\\
 \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
 
@@ -147,17 +151,25 @@ $$
 
 
 $$
-\text{Equation of motion (i-th particle evolves according to the Langevin equation):}\\
-\frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)\\
-\frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)\\\\
-V(x)\text{ is the inter-particle potential:}\\
-V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)\\
-0 & (\text{otherwise}) \end{cases}\\
+\text{Equation of motion (i-th particle evolves according to the Langevin equation):}
+\\
+\frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)
+\\
+\frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)
+\\
+\\
+V(x)\text{ is the inter-particle potential:}
+\\
+V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)
+\\
+0 & (\text{otherwise}) \end{cases}
+\\
 r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
 $$
 
 $$
-\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}\\
+\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}
+\\
 R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
 $$
 
