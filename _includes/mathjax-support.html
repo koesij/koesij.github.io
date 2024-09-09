@@ -1,5 +1,12 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"],
+      Macros: {
+        braket: ["\\langle #1 \\rangle", 1],  // Custom definition for \braket
+        boldsymbol: ["{\\boldsymbol{#1}}", 1]  // Ensures \boldsymbol works
+      }
+    },
     tex2jax: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
