@@ -1,5 +1,6 @@
 ---
 layout: splash
+use_math: true
 permalink: /
 hidden: true
 header:
