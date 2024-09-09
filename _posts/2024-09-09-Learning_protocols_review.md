@@ -129,7 +129,7 @@ The control parameters are bounded as$0\leq \lambda\leq11,\ 1\leq\kappa\leq7$ fo
 
 ##### Part 1
 
-The neural network outputs $(\lambd=a(t), \kappa(t))$ for given input $t$. **It is trained to minimize protocol time $t_f$.** The order parameters are set similarly to those in the case of the active particle discussed in part 2. 
+The neural network outputs $(\lambda=a(t), \kappa(t))$ for given input $t$. **It is trained to minimize protocol time $t_f$.** The order parameters are set similarly to those in the case of the active particle discussed in part 2. 
 
 **Result:** The protocol learned by the neural network achieved a **state-to-state transformation three times faster** compared to the protocol derived from constrained theoretical methods.
 
