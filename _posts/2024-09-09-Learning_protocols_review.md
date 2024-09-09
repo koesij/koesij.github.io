@@ -27,6 +27,7 @@ $$
 $$
 
 
+
 $$
 \text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:
 \\
@@ -44,7 +45,6 @@ The second line: active contribution
 $$
 \text{The steady state values of the system's position and velocity for the final trap stiffness:}
 \\
-
 x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
 $$
 
