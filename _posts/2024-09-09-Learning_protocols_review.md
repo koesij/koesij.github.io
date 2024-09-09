@@ -15,8 +15,7 @@ use_math: true
 
 #### Single active Ornstein-Uhlenbeck particle
 
-$$\text{Equation of motion: } \\ 
-\dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)
+$$\text{Equation of motion: } \\ \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)
 \\
 \\
 \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: 
