@@ -1,10 +1,9 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
-      extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"],
+      extensions: ["AMSmath.js", "AMSsymbols.js", "bm.js", "noErrors.js", "noUndefined.js"],  // Added bm.js
       Macros: {
         braket: ["\\langle #1 \\rangle", 1],  // Custom definition for \braket
-        boldsymbol: ["{\\boldsymbol{#1}}", 1]  // Ensures \boldsymbol works
       }
     },
     tex2jax: {
