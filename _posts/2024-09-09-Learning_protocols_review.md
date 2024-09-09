@@ -5,11 +5,7 @@ categories: physics read
 use_math: true
 ---
 
-# Paper review: Learning protocols for the fast and efficient control of active matter
-
-
-
-## Coneel Casert, Stephen Whitelam
+## Coneel Casert, Stephen Whitelam$^\dagger$
 
 ### Abstract
 
