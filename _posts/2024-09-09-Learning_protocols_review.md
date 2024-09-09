@@ -23,7 +23,7 @@ $$
 \\
 \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: 
 \\
-\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
+\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{\vert t-t'\vert /\tau}
 $$
 
 
@@ -164,7 +164,7 @@ V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6
 \\
 0 & (\text{otherwise}) \end{cases}
 \\
-r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
+r_{ij}=\vert \boldsymbol{r_j}-\boldsymbol{r_i} \vert
 $$
 
 $$
