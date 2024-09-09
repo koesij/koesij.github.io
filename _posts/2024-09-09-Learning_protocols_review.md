@@ -125,7 +125,7 @@ The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi
 
 #### Neural Network
 
-The control parameters are bounded as$0\leq \lambda\leq11,\ 1\leq\kappa\leq7$ for a typical experimental setup.
+The control parameters are bounded as $0\leq \lambda\leq11,\ 1\leq\kappa\leq7$ for a typical experimental setup.
 
 ##### Part 1
 
