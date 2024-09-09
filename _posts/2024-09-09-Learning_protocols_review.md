@@ -6,7 +6,7 @@ tags: ["classical", "active matter control"]
 use_math: true
 author_profile: false
 sidebar: 
-    nav: "docs"
+    nav: "counts"
 ---
 
 ## Coneel Casert, Stephen Whitelam

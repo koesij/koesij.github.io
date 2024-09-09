@@ -28,4 +28,4 @@ counts:
   - title: "Category"
     use: true
   - title: "Tag"
-    use: False
+    use: true
