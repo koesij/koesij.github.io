@@ -15,19 +15,15 @@ use_math: true
 
 #### Single active Ornstein-Uhlenbeck particle
 
-<!-- $$
-
-\text{Equation of motion: }
+$$\text{Equation of motion: }
 \\
 \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)
 \\
 \\
 \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: 
 \\
-\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
-$$ -->
+\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}$$
 
-\[\text{Equation of motion: } \\ \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t) \\ \\ \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: \\ \braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}\] \[\text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f: \\ \braket{Q}=\frac{1}{2}(\alpha_ix_i-\alpha_fx_f)+\frac{1}{2}\int^{t_f}_0 dt\dot \alpha(t)x(t) \\ +\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)\\\\ x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}\]
 
 $$
 \text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:
@@ -43,8 +39,7 @@ The first line: passive heat (- change in energy + work done by changing the tra
 The second line: active contribution
 
 
-$$
-\text{The steady state values of the system's position and velocity for the final trap stiffness:}
+$$\text{The steady state values of the system's position and velocity for the final trap stiffness:}
 \\
 
 x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
