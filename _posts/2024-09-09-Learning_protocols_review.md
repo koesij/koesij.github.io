@@ -17,10 +17,10 @@ use_math: true
 
 $$
 
-\text{Equation of motion: }\\
-\dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)\\\\
-\text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: \\
-\braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
+    \text{Equation of motion: }\\
+    \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)\\\\
+    \text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: \\
+    \braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{|t-t'|/\tau}
 
 $$
 
@@ -28,11 +28,11 @@ $$
 
 
 $$
-\text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:\\
+    \text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:\\
 
-\braket{Q}=\frac{1}{2}(\alpha_ix_i-\alpha_fx_f)+\frac{1}{2}\int^{t_f}_0 dt\dot \alpha(t)x(t) \\
-+\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)\\\\
-x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}
+    \braket{Q}=\frac{1}{2}(\alpha_ix_i-\alpha_fx_f)+\frac{1}{2}\int^{t_f}_0 dt\dot \alpha(t)x(t) \\
+    +\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)\\\\
+    x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}
 $$
 The first line: passive heat (- change in energy + work done by changing the trap stiffness)
 
@@ -40,8 +40,8 @@ The second line: active contribution
 
 
 $$
-\text{The steady state values of the system's position and velocity for the final trap stiffness:}\\
-x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
+    \text{The steady state values of the system's position and velocity for the final trap stiffness:}\\
+    x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
 $$
 
 
@@ -66,9 +66,9 @@ However, when control parameters change sharply at the final moment, **the syste
 
 Therefore the constraint called **State-to-State Transformation (SST)** is introduced. This constraint guarentees that the system reaches the final steady state and accounts for all the heat involved in the process, rather than only focusing on minimizing the heat up to the point of the final parameter change.
 $$
-\text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}  \\
-\text{optimizer: genetic algorithm}\\
-\text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f\\
+    \text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}  \\
+    \text{optimizer: genetic algorithm}\\
+    \text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f\\
 \\
 
 \Delta^2\equiv(x_f-x_{ss})^2+(y_f-y_{ss})^2\\
@@ -88,19 +88,18 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 #### Active Brownian particle confined by a two-dimensional harmonic potential
 
 $$
-\text{equation of motion:}\\
-\frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),\\
-\frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)\\\\
-\text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)\\
-\text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
+    \text{equation of motion:}\\
+    \frac{d \boldsymbol{\rho}}{d\tau}=u_0\hat{e}(\theta)-\mu k \boldsymbol{\rho}+\sqrt{2D_t}\boldsymbol{\xi}_r(\tau),\\
+    \frac{d\theta}{d\tau}=\sqrt{2D_\theta}\xi_\theta(\tau)\\\\
+    \text{position vector: }\boldsymbol{\rho}=(\rho cos\phi, \rho sin\phi)\\
+    \text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
 $$
 
 Dimensionless version
 $$
-\frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
-\frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)
-\\\\
-\kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
+    \frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
+    \frac{d\theta}{dt}=\sqrt{2}\xi_{\theta}(t)\\\\
+    \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
 The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi)$ of the system dependes only on $r\equiv|\boldsymbol{r}|$ and $\chi \equiv \theta-\phi$, and is known exactly Kanaya Malakar, Arghya Das, Anupam Kundu, K. Vijay Kumar, and Abhishek Dhar, “Steady state of an active Brownian particle in a two-dimensional harmonic trap,” Physical Review E 101, 022610 (2020).
 
@@ -120,7 +119,7 @@ The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$. **It i
 
 The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$ at given $t_f=0.44$. **It is trained to minimize mean work.** The order parameters are set similarly to those in the case of the active particle discussed in part 2.
 $$
-\text{Mean work: }\braket{W}=\int^{t_f}_0dt\dot{\kappa}\braket{\frac{\partial U}{\partial \kappa}}=\frac{1}{2}\int^{t_f}_0dt\dot{\kappa}\braket{r^2}
+    \text{Mean work: }\braket{W}=\int^{t_f}_0dt\dot{\kappa}\braket{\frac{\partial U}{\partial \kappa}}=\frac{1}{2}\int^{t_f}_0dt\dot{\kappa}\braket{r^2}
 $$
 **Result:** The neural network was able to **extract net work** during the state-to-state transformation, achieving a protocol where the mean work was negative, meaning more work was extracted than input. **In comparison, the theoretical protocol was not able to reach negative net work.**
 
@@ -135,20 +134,20 @@ $$
 
 $$
 
-\text{Equation of motion (i-th particle evolves according to the Langevin equation):}\\
-\frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)\\
-\frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)\\\\
-V(x)\text{ is the inter-particle potential:}\\
-V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)\\
-0 & (\text{otherwise}) \end{cases}\\
-r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
+    \text{Equation of motion (i-th particle evolves according to the Langevin equation):}\\
+    \frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)\\
+    \frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)\\\\
+    V(x)\text{ is the inter-particle potential:}\\
+    V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)\\
+    0 & (\text{otherwise}) \end{cases}\\
+    r_{ij}=|\boldsymbol{r_j}-\boldsymbol{r_i}|
 
 $$
 
 
 $$
-\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}\\
-R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
+    \text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}\\
+    R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
 $$
 **No analytical solutions are known for this many-body system**, but a protocol can be learned in exactly the same way as for the single-particle problems considered previously, using a genetic algorithm to train a neural network to minimize $\phi=\braket{W}$.
 
