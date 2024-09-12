@@ -9,7 +9,7 @@ sidebar: false
     # nav: "counts"
 ---
 
-## Coneel Casert, Stephen Whitelam
+## Casert, Corneel, and Stephen Whitelam. "Learning protocols for the fast and efficient control of active matter." *arXiv preprint arXiv:2402.18823* (2024).
 
 ### Abstract
 
