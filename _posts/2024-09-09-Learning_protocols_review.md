@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Paper review: Learning protocols for the fast and efficient control of active matter"
+title: "Learning protocols for the fast and efficient control of active matter"
 categories: ["physics read"]
 tags: ["classical", "active matter control"]
 use_math: true
