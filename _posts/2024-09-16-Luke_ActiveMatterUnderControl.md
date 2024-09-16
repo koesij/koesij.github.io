@@ -17,7 +17,7 @@ sidebar: false
 
 #### Optimal Protocols: Passive vs. Active Systems 
 
-​	Active systems are inherently nonequilibrium due to the continouous conversion of energy into work by individual particles, resulting in constant heat dissipation. This is different from passive systems, where thermodynamics efficiency improves with slower protocols. In active matter, however, there's a trade-off . If a protocol is too fast, it dissipates more heat. If it's too slow, dissipation also grows because of sustained energy consumption. As a result, there's a natural optimal protocol duration where heat dissipation is minimized. This paper lies in understanding the consequences of this growing dissipation and how we control active systems despite it. 
+​	Active systems are inherently nonequilibrium due to the continouous conversion of energy into work by individual particles, resulting in constant heat dissipation. This is different from passive systems, where thermodynamics efficiency improves with slower protocols. In active matter, however, there's a trade-off . **If a protocol is too fast, it dissipates more heat. If it's too slow, dissipation also grows because of sustained energy consumption. As a result, there's a natural optimal protocol duration where heat dissipation is minimized.** This paper lies in understanding the consequences of this growing dissipation and how we control active systems despite it. 
 
  In a **passive system**, using overdamped Langevin dynamics, the heat dissipation follows the first law of thermodynamics. The motion of particles is gonverned by the follwing equation:
 
