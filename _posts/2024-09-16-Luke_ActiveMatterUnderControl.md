@@ -156,4 +156,4 @@ These functions $\{V, \Phi, \sum, \Lambda, \Phi\}$ represent terms in the heat d
 
 #### Application to Active and Many-Body Systems
 
-​	One of the key results of applying this framework to active and many-body systems is that, unlike passive control, protocols in active systems do not collapse onto a single master curve. For more detailed insights, including visual representations and specific cases, it’s best to refer directly to the figures and discussions presented in the paper.
+​	One of the key results of applying this framework to active and many-body systems is that, **unlike passive control, protocols in active systems do not collapse onto a single master curve.** For more detailed insights, including visual representations and specific cases, it’s best to refer directly to the figures and discussions presented in the paper.
