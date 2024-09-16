@@ -164,7 +164,7 @@ The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi
 
 The neural network outputs $(\lambda = a(t), \kappa(t))$ based on the input time $t$. **It is trained to minimize the protocol time $t_f$**, with order parameters similar to those used in the case of the active particle, ensuring the SST.
 
-**Result:** The protocol learned by the neural network achieved a **SST three times faster** than the protocol derived from traditional constrained theoretical methods.
+**Result:** The protocol learned by the neural network achieved a **SST three times faster** than the protocol derived from  theoretical methods.
 
 ##### Part 2
 
