@@ -20,15 +20,21 @@ sidebar: false
 ​	Active systems are inherently nonequilibrium due to the continouous conversion of energy into work by individual particles, resulting in constant heat dissipation. This is different from passive systems, where thermodynamics efficiency improves with slower protocols. In active matter, however, there's a trade-off . If a protocol is too fast, it dissipates more heat. If it's too slow, dissipation also grows because of sustained energy consumption. As a result, there's a natural optimal protocol duration where heat dissipation is minimized. This paper lies in understanding the consequences of this growing dissipation and how we control active systems despite it. 
 
  In a **passive system**, using overdamped Langevin dynamics, the heat dissipation follows the first law of thermodynamics. The motion of particles is gonverned by the follwing equation:
+
+
 $$
 \dot{\boldsymbol{r}}_t=-\mu \nabla_{i}\phi(\alpha, {\boldsymbol{r}})+\sqrt{2D}\boldsymbol{\eta}_i
 $$
 
 
+
 The average heat dissipated into the thermal bath for a passive system is given by:
+
+
 $$
 \braket{Q}=\braket{\phi(\alpha_0)}_{s}-\braket{\phi(\alpha_1)}+\int^{t_p}_{0}dt\dot{\alpha}\braket{\partial_{\alpha} \phi}
 $$
+
 
 
 In this case, there is a balance between the system's potential energy and the work done.
@@ -36,12 +42,17 @@ In this case, there is a balance between the system's potential energy and the w
 
 
  For an **active system**, small modification is introduced by adding a self-propulsion term. Each particle  $i=\{1,...,N\}$ has an independent self-propulsion velocity $\boldsymbol{v}_i$, and the motion equation becomes:
+
+
 $$ {\}
 \dot{\boldsymbol{r}}=-\mu\nabla_{i}\phi(\alpha, {\boldsymbol{r}})+\boldsymbol{v}_i+\sqrt{2D}\boldsymbol{\eta}_i
 $$
 
 
+
 The average heat dissipated into the thermal bath for an active system is:
+
+
 $$
 \braket{Q}=\braket{\phi(\alpha_0)}_{s}+\braket{\phi(\alpha_1)}+\int^{t_p}_0dt[\dot{\alpha}\braket{\partial_{\alpha}\phi}-\braket{J}]
 \\=\frac{Nt_p\braket{v^2}}{\mu}+\braket{\phi(\alpha_0)}_{s}-\braket{\phi(\alpha_1)}+\int^{t_p}_0dt(\dot{\alpha}\braket{\partial_{\alpha}\phi}-\sum^{N}_{i=1}\braket{\nabla_{i} \phi\cdot\boldsymbol{v}_i})
@@ -50,6 +61,8 @@ $$
 J=\boldsymbol{f}_i\cdot\boldsymbol{v}_i\\
 {\alpha}_0={\alpha}(t=0), {\alpha}_1={\alpha}(t=t_p)
 $$
+
+
 In the case of an active system, **an additional boundary term $\frac{Nt_p \braket{v^2}}{\mu}$ appears in the heat dissipation compared to the passive system.** This term is proportional to the protocol duration and depends on the specifics of the self-propulsion mechanism. It becomes more significant when the number of particles is large. **The integral term will play an important role in later discussions, as it reflects the continous contribution of the system's dynamics over time.**
 
 
@@ -57,6 +70,8 @@ In the case of an active system, **an additional boundary term $\frac{Nt_p \brak
 #### Framework for Optimal Control
 
 ​	To address this, **a weak and slow driving assumption is made, allowing the system to remain close to its steady state while varying the control parameter $\alpha$. This assumption, while limiting generality, enables the use of systematic response theories.** With this approach, a general form for heat dissipation is derived, which consists of both a boundary term and a Lagrangian term:
+
+
 $$
 \text{heat dissipation:}\\
 \braket{Q}=B(\alpha_0, \alpha_1,\dot{\alpha}_0, \dot{\alpha}_1 
@@ -72,7 +87,10 @@ B=\braket{\phi_0}_s-\braket{\phi_1}_s+\dot{\alpha}_0\sum(\alpha_0)-\dot\alpha_1(
 $$
 
 
+
 The functions $\{V, \Phi, \sum, \Lambda, \Phi\}$ are given by:
+
+
 $$
 V=-\braket{J}_s, \ \Phi=\int^{\infty}_{0}dtR_{1}(\phi;t,0)t,
 \\
@@ -84,24 +102,34 @@ V=-\braket{J}_s, \ \Phi=\int^{\infty}_{0}dtR_{1}(\phi;t,0)t,
 $$
 
 
+
 **The Lagrangian is the key quantity in minimize heat dissipation.** The Lagrangian has a familiar structure to physicists, resembling kinetic and potential energy terms. By applying the calculus of variations and solving the Euler-Lagrange equations, the system can be optimized. 
 
 In this setup, the Lagrangian depends on $\dot{\boldsymbol{\alpha}}$ and $\boldsymbol{\alpha}$. Since the Lagrangian is homogeneous -meaning it doesn't explicitly depend on time - a constant of motion, which is the Hamiltonian, can be extracted. **This allows for the calculation of the protocol speed and the first integral of motion, both of which are crucial for determining the optimal protocols.**
+
+
 $$
 E(t_p)=\frac{\dot\alpha^2}{2}(\Psi-\sum')(\alpha)+V(\alpha)
 $$
 
 
+
 The optimal protocol speed is given by:
+
+
 $$
 \dot{\alpha}=\pm\sqrt{\frac{E-V(\alpha)}{(\Psi-\sum')(\alpha)}}
 $$
 
 
+
 The protocol duration $t_p$ can be computed using:
+
+
 $$
 t_p=\Bigg|\int^{\alpha_1}_{\alpha_0}da\sqrt{\frac{(\Psi-\sum')(\alpha)}{E-V(\alpha)}}\Bigg|
 $$
+
 
 
 These functions $\{V, \Phi, \sum, \Lambda, \Phi\}$ represent terms in the heat dissipation formula and are influenced by the system’s linear and second-order responses. **To fully capture the system's behavior, it is important to account for non-linear effects that arise from second-order responses.**
