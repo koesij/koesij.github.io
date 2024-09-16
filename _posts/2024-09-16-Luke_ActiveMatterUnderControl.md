@@ -44,7 +44,7 @@ In this case, there is a balance between the system's potential energy and the w
  For an **active system**, small modification is introduced by adding a self-propulsion term. Each particle  $i=\{1,...,N\}$ has an independent self-propulsion velocity $\boldsymbol{v}_i$, and the motion equation becomes:
 
 
-$$ {\}
+$$
 \dot{\boldsymbol{r}}=-\mu\nabla_{i}\phi(\alpha, {\boldsymbol{r}})+\boldsymbol{v}_i+\sqrt{2D}\boldsymbol{\eta}_i
 $$
 
