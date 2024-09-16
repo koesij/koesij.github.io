@@ -19,54 +19,70 @@ sidebar: false
 
 #### Single active Ornstein-Uhlenbeck particle
 
+​	The system being considered is an **active Ornstein-Uhlenbeck particle**, whose motion follows the equation:
+
+
 $$
-\text{Equation of motion: }
-\\
 \dot r(t) = v(t)-\mu\alpha r(t)+\sqrt{2D}\eta(t)
-\\
-\\
-\text{Self-propulsion velocity following Ornstein-Uhlenbeck process}: 
-\\
+$$
+
+
+
+
+
+The **self-propulsion velocity** of the particle is governed by the Ornstein-Uhlenbeck process, where:
+
+
+$$
 \braket{v}=0 \text{ and } \braket{v(t)v(t')}=D_1\tau^{-1}e^{\vert t-t'\vert /\tau}
 $$
 
 
+The trajectory-averaged heat is calculated as the trap stiffness varies from $\alpha_i$ to $\alpha_f$, with both active and passive contributions considered:
+
 
 $$
-\text{Trajectory-averaged heat associated with varying }\alpha(t)\text{ from } \alpha_i \text{ to }\alpha_f \text{ in time } t_f:
-\\
 \braket{Q}=\frac{1}{2}(\alpha_ix_i-\alpha_fx_f)+\frac{1}{2}\int^{t_f}_0 dt\dot \alpha(t)x(t) \\
 +\frac{D_1t_f}{\tau\mu}-\int^{t_f}_0dt\alpha(t)y(t)
 \\\\
 x \equiv \braket{r^2} \text{ and }y\equiv\braket{rv}
 $$
 
-The first line: passive heat (- change in energy + work done by changing the trap stiffness)
 
-The second line: active contribution
+
+The **first line of the heat dissipation formula represents passive heat**, which includes:
+
+1. The change in energy due to the difference between $\alpha_i$ and $\alpha_f$.
+2. The work done by adjusting the trap stiffness, captured by the integral over $\dot{\alpha}(t)$.
+
+The **second line of the formula corresponds to the active contribution**, which arises from the particle’s self-propulsion. This includes:
+
+1. The active energy dissipation over time, scaled by the self-propulsion velocity $D_1$.
+2.  Coupling term $\alpha(t) y(t)$.
+
+
+
+The steady-state values for the particle’s position and velocity, corresponding to the final trap stiffness $\alpha_f$, are:
+
 
 
 $$
-\text{The steady state values of the system's position and velocity for the final trap stiffness:}
-\\
 x_{ss}=\frac{1}{\alpha_f \mu}(\frac{D_1}{\gamma_f}+D) \text{ and } y_{ss}=\frac{D_1}{\gamma_f}
 $$
+
+
 
 #### Neural Network
 
 ##### Part 1
 
-The neural network outputs $\alpha(t)$ for given input $t$ at fixed $t_f$. It is trained to minimize the order parameter.
+​	The neural network is trained to output $\alpha(t)$ for a fixed time $t_f$, with the goal of minimizing the order parameter $(\phi = \braket{Q})$ using a genetic algorithm. The control parameter $\alpha_{\theta}(t)$ is constrained to stay within the limits set by the initial and final trap stiffness:
 
 $$
-\text{order parameter: }\phi =\braket{Q}
-\\
-\text{optimizer: genetic algorithm}
-\\
-\text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f
+\text{Constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f
 $$
 
-The neural network **exhibited non-monotonic, rapidly-varying protocols with jump discontinuities at initial and final times**, unlike the smooth, slowly varying protocols in the theoretical framework of “Luke K. Davis et al., *Active matter under control: Insights from response theory*.”
+The neural network produced **non-monotonic, rapidly varying protocols with discontinuities**, unlike the smooth protocols derived from theoretical framework, “Luke K. Davis et al., *Active matter under control: Insights from response theory*.”
 
 However, when control parameters change sharply at the final moment, **the system doesn’t have enough time to physically respond**, as the simulation stops the clock at this point. In reality, if control parameters were abruptly altered, the particles would need time to react, and heat would be generated as the system adjusts to the new state. 
 
@@ -74,20 +90,26 @@ However, when control parameters change sharply at the final moment, **the syste
 
 ##### Part 2
 
-Therefore the constraint called **State-to-State Transformation (SST)** is introduced. This constraint guarentees that the system reaches the final steady state and accounts for all the heat involved in the process, rather than only focusing on minimizing the heat up to the point of the final parameter change.
+​	To ensure the system reaches the final steady state and accounts for all the heat involved in the process, a constraint called **State-to-State Transformation (SST)** is introduced. This constraint ensures the focus is not just on minimizing the heat up to the final parameter change, but also on driving the system to its steady state.
+
 
 $$
 \text{order parameter: }\phi =\Delta+c \text{ if }\Delta\geq\Delta_0 \text{ and } \phi = \braket{Q}\text{ otherwise}
 \\
-\text{optimizer: genetic algorithm}
-\\
-\text{experimentally-motivated constraint: }\alpha_i \le \alpha_\theta(t) \le \alpha_f\\\\
-
-\Delta^2\equiv(x_f-x_{ss})^2+(y_f-y_{ss})^2
-\\
-\text{tolerance with which we wish to achieve this steady state: }\Delta_0=10^{-3}\\
-c=100
+c=100\text{ is a penalty constant.}
 $$
+
+
+
+Here, $\Delta$ measures how close the system is to its steady state at the end of the process:
+
+
+$$
+\Delta^2=(x_f-x_{ss})^2+(y_f-y_{ss})^2
+$$
+ 
+
+with $x_{ss}$ and $y_{ss}$ being the steady-state values of position and velocity, respectively. The tolerance for achieving the steady state is set to $\Delta_0 = 10^{-3}$.
 
 The modified order parameter **ensures that the Neural Network’s protocol drives the particle to the steady state corresponding to  $\alpha_f$** . Once this is achieved, the Neural Network then learns to minimize the heat among all protocols that satisfy the SST constraint.
 
@@ -98,6 +120,9 @@ The modified order parameter **ensures that the Neural Network’s protocol driv
 ### Active Particle of Variable Activity in a Trap of Variable Stiffness
 
 #### Active Brownian particle confined by a two-dimensional harmonic potential
+
+The motion of an **active Brownian particle** in a two-dimensional harmonic potential is described by the following equations:
+
 
 $$
 \text{equation of motion:}
@@ -112,7 +137,10 @@ $$
 \text{direction: }\hat{e}(\theta)=(cos\theta, sin\theta)
 $$
 
-Dimensionless version
+
+
+The equations can be rewritten in a **dimensionless form** as:
+
 
 $$
 \frac{d\boldsymbol{r}}{dt}=\lambda \hat{e}(\theta)-\kappa\boldsymbol{r}+\sqrt{2}\boldsymbol{\xi}_r(t)\\
@@ -122,29 +150,36 @@ $$
 \kappa\equiv\mu k/D_\theta \text{ and }\lambda\equiv u_0/\sqrt{D_\theta D_t}
 $$
 
+
+
 The **steady-state probability distribution function** $\mathcal{P}_{ss}(r, \chi)$ of the system dependes only on $r \equiv \vert \boldsymbol{r} \vert$ and $\chi \equiv \theta-\phi$, and is known exactly Kanaya Malakar, Arghya Das, Anupam Kundu, K. Vijay Kumar, and Abhishek Dhar, “Steady state of an active Brownian particle in a two-dimensional harmonic trap,” Physical Review E 101, 022610 (2020).
 
 
 
 #### Neural Network
 
-The control parameters are bounded as $0\leq \lambda\leq11,\ 1\leq\kappa\leq7$ for a typical experimental setup.
+ For this experiment, the control parameters are bounded within the ranges $0 \leq \lambda \leq 11$ and $1 \leq \kappa \leq 7$, which represent typical experimental conditions.
 
 ##### Part 1
 
-The neural network outputs $(\lambda=a(t), \kappa(t))$ for given input $t$. **It is trained to minimize protocol time $t_f$.** The order parameters are set similarly to those in the case of the active particle discussed in part 2. 
+The neural network outputs $(\lambda = a(t), \kappa(t))$ based on the input time $t$. **It is trained to minimize the protocol time $t_f$, **with order parameters similar to those used in the case of the active particle, ensuring the SST.
 
-**Result:** The protocol learned by the neural network achieved a **state-to-state transformation three times faster** compared to the protocol derived from constrained theoretical methods.
+**Result:** The protocol learned by the neural network achieved a **SST three times faster** than the protocol derived from traditional constrained theoretical methods.
 
 ##### Part 2
 
-The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$ at given $t_f=0.44$. **It is trained to minimize mean work.** The order parameters are set similarly to those in the case of the active particle discussed in part 2.
+In this setup, the neural network outputs $(\lambda(t), \kappa(t))$ for the given time input t and a fixed protocol time t_f = 0.44. **The goal here is to minimize the mean work.** Again, the order parameters are set similarly to the active particle, ensuring the SST.
+
+The mean work is calculated as:
+
 
 $$
-\text{Mean work: }\braket{W}=\int^{t_f}_0dt\dot{\kappa}\braket{\frac{\partial U}{\partial \kappa}}=\frac{1}{2}\int^{t_f}_0dt\dot{\kappa}\braket{r^2}
+\braket{W}=\int^{t_f}_0dt\dot{\kappa}\braket{\frac{\partial U}{\partial \kappa}}=\frac{1}{2}\int^{t_f}_0dt\dot{\kappa}\braket{r^2}
 $$
 
-**Result:** The neural network was able to **extract net work** during the state-to-state transformation, achieving a protocol where the mean work was negative, meaning more work was extracted than input. **In comparison, the theoretical protocol was not able to reach negative net work.**
+
+
+**Result:** The neural network was able to **extract net work** during the state-to-state transformation, achieving a protocol where the mean work was negative, meaning more work was extracted than input. **In contrast, the theoretical protocol was not able to reach negative net work.**
 
 
 
@@ -152,32 +187,54 @@ $$
 
 #### N interacting active Brownian particles placed within the two-dimensional harmonic trap
 
+The motion of N interacting active Brownian particles within a two-dimensional harmonic trap is described by the following equations:
 
 
 $$
-\text{Equation of motion (i-th particle evolves according to the Langevin equation):}
+\text{(i-th particle evolves according to the Langevin equation)}
 \\
 \frac{d\boldsymbol{r}_i}{dt}=\lambda\hat{e_i}(\theta)-\kappa r_i-\partial_{r_i}\sum_{j\neq i}V(r_{ij})+\sqrt{2}\boldsymbol{\xi}_r(t)
 \\
 \frac{d\theta_i}{dt}=\sqrt{2}\xi_\theta(t)
 \\
-\\
-V(x)\text{ is the inter-particle potential:}
-\\
+$$
+
+
+
+$V(x)$ is the inter-particle potential:
+
+
+$$
 V(x)=\begin{cases}4\epsilon[(\sigma/x)^{12}-(\sigma/x)^{6}]+\epsilon & (x<2^{1/6} \epsilon)
 \\
 0 & (\text{otherwise}) \end{cases}
-\\
-r_{ij}=\vert \boldsymbol{r_j}-\boldsymbol{r_i} \vert
 $$
 
+
+where $r_{ij}=\vert \boldsymbol{r_j}-\boldsymbol{r_i} \vert$  is the distance between particles $i $ and $j$.
+
+
+
+The **mean work** done on the system is given by:
+
+
 $$
-\text{Mean work: }\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}
-\\
+\braket{W}=\frac{N}{2}\int^{t_f}_0{dt\dot{\kappa}R^2}
+$$
+
+
+
+where $R^2$ is the average squared distance:
+
+
+$$
 R^2\equiv N^{-1}\sum^{N}_{i=1}\braket{r^{2}_{i}}
 $$
 
+
 **No analytical solutions are known for this many-body system**, but a protocol can be learned in exactly the same way as for the single-particle problems considered previously, using a genetic algorithm to train a neural network to minimize $\phi=\braket{W}$.
+
+
 
 #### Neural Network
 
@@ -185,4 +242,4 @@ The neural network outputs $(\lambda(t), \kappa(t))$ for given input $t$ at give
 
 
 
-**Result:** The neural network was trained with different numbers of particles $N$. The main finding of the experiment was that **the extracted work per particle is a non-monotonic function of N.** This suggests that certain particle numbers may optimize work extraction in many-body active engines, indicating that particular cycles of such engines may function more efficiently with specfic particle counts.
+**Result:** The neural network was trained with different numbers of particles $N$. The main finding of the experiment was that **the extracted work per particle is a non-monotonic function of N.** This suggests that certain particle numbers may optimize work extraction in many-body active engines, indicating that particular cycles of such engines may function more efficiently with specific particle counts.
