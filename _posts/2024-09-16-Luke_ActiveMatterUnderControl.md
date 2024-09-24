@@ -2,7 +2,7 @@
 layout: single
 title: "Active Matter under Control: Insights from Response Theory"
 categories: ["physics read"]
-tags: ["classical", "active matter control"]
+tags: ["classical", "out of equilibrium", "active matter control"]
 use_math: true
 author_profile: false
 sidebar: false

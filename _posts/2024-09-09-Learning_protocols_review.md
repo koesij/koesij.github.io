@@ -2,7 +2,7 @@
 layout: single
 title: "Learning protocols for the fast and efficient control of active matter"
 categories: ["physics read"]
-tags: ["classical", "active matter control"]
+tags: ["classical", "out of equilibrium", "active matter control"]
 use_math: true
 author_profile: false
 sidebar: false
@@ -107,7 +107,7 @@ Here, $\Delta$ measures how close the system is to its steady state at the end o
 $$
 \Delta^2=(x_f-x_{ss})^2+(y_f-y_{ss})^2
 $$
- 
+
 
 with $x_{ss}$ and $y_{ss}$ being the steady-state values of position and velocity, respectively. The tolerance for achieving the steady state is set to $\Delta_0 = 10^{-3}$.
 
