@@ -51,7 +51,7 @@ Since the QFT is a unitary operation, it can be implemented as a quantum circuit
 
 
 
-![QFT_image](../images/2024-09-29-Q-Hackathon/QFT_image.png)
+![QFT_image](../images/2024-09-29-Q-Hackathon/QFT_image.png){: width="50%" height="50%"}
 
 
 
