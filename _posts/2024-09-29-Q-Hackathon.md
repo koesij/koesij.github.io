@@ -659,7 +659,11 @@ qml.draw_mpl(uqs_circuit)()
 
 [4, 3, 2, 1, 0] 
 
-![M31_uqs](../images/2024-09-29-Q-Hackathon/M31_uqs.png)
+
+
+![M31_uqs](/images/2024-09-29-Q-Hackathon/M31_uqs.png)
+
+
 
 Executing the Circuit and Plotting the Measurement Results
 
@@ -873,6 +877,8 @@ $$
 
 
 Simplifying:
+
+
 $$
 \sqrt{\frac{1}{11}} \vert 0 \rangle_1 + \sqrt{\frac{10}{11}} \vert 1 \rangle_1
 $$
