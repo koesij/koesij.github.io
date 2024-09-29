@@ -7,7 +7,7 @@ use_math: true
 author_profile: false
 sidebar: false
 nav: "counts"
-Typora-root-url:../
+Typora-root-url: ../
 ---
 
 # 2024 Quantum-Hackathon: Uniform Quantum Superposition State Preparation
