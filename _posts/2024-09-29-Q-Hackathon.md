@@ -544,7 +544,7 @@ UQS circuit for  $N = 31$:
 
 
 
-![M31_uqs](../images/2024-09-29-Q-Hackathon/M31_uqs.png)
+![M31_uqs](/images/2024-09-29-Q-Hackathon/M31_uqs.png)
 
 #### UQS Circuit Construction for Arbitary Integer N in Code
 
