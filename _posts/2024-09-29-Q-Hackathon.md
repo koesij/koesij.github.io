@@ -7,6 +7,7 @@ use_math: true
 author_profile: false
 sidebar: false
 nav: "counts"
+Typora-root-url:../
 ---
 
 # 2024 Quantum-Hackathon: Uniform Quantum Superposition State Preparation
@@ -51,7 +52,7 @@ Since the QFT is a unitary operation, it can be implemented as a quantum circuit
 
 
 
-![QFT_image](../images/2024-09-29-Q-Hackathon/QFT_image.png)
+![QFT_image](/images/2024-09-29-Q-Hackathon/QFT_image.png)
 
 
 
@@ -71,7 +72,7 @@ The corresponding quantum circuit is shown below.
 
 
 
-![M3_uqs](../images/2024-09-29-Q-Hackathon/M3_uqs.png)
+![M3_uqs](/images/2024-09-29-Q-Hackathon/M3_uqs.png)
 
 
 
@@ -163,7 +164,7 @@ The corresponding quantum circuit is shown below.
 
 
 
-![M5_uqs](../images/2024-09-29-Q-Hackathon/M5_uqs.png)
+![M5_uqs](/images/2024-09-29-Q-Hackathon/M5_uqs.png)
 
 
 
@@ -267,7 +268,7 @@ The circuit for  N = 17  follows this structure, as shown below.
 
 
 
-![M17_uqs](../images/2024-09-29-Q-Hackathon/M17_uqs.png)
+![M17_uqs](/images/2024-09-29-Q-Hackathon/M17_uqs.png)
 
 Mathematically, the process can be represented as follows.
 
@@ -392,7 +393,7 @@ The circuit for  $N = 29$  follows this structure, as shown below.
 
 
 
-![M29_uqs](../images/2024-09-29-Q-Hackathon/M29_uqs.png)
+![M29_uqs](/images/2024-09-29-Q-Hackathon/M29_uqs.png)
 
 Mathematically, the process can be represented as follows.
 
@@ -535,7 +536,7 @@ This represents a uniform quantum superposition over 29 quantum states.
 
 Here is the UQS circuit for  $N = 30$:
 
- ![M30_uqs](../images/2024-09-29-Q-Hackathon/M30_uqs.png)
+ ![M30_uqs](/images/2024-09-29-Q-Hackathon/M30_uqs.png)
 
 
 
@@ -683,7 +684,7 @@ plt.show()
 
 
 
-![M31_measure](../images/2024-09-29-Q-Hackathon/M31_measure-7243670.png)
+![M31_measure](/images/2024-09-29-Q-Hackathon/M31_measure-7243670.png)
 
 
 
@@ -705,7 +706,7 @@ plt.show()
 
 
 
-![M29_part](../images/2024-09-29-Q-Hackathon/M29_part.png)
+![M29_part](/images/2024-09-29-Q-Hackathon/M29_part.png)
 
 
 
@@ -725,7 +726,7 @@ plt.show()
 
 
 
-![M7_eff](../images/2024-09-29-Q-Hackathon/M7_eff.png)
+![M7_eff](/images/2024-09-29-Q-Hackathon/M7_eff.png)
 
 Mathematically, the process can be represented as follows.
 
@@ -841,7 +842,7 @@ This represents a uniform quantum superposition over  $2^0 + 2^1 + 2^2$  quantum
 
 UQS circuit for  $N = 22$:
 
-![M22_eff](../images/2024-09-29-Q-Hackathon/M22_eff.png)
+![M22_eff](/images/2024-09-29-Q-Hackathon/M22_eff.png)
 
  Next, we need to construct the quantum states for  $N = 11$ . The binary representation of 11 is  $2^3 + 2^1 + 2^0$ . Most of the process is similar to the one used for  $N = 7$ . However, the key difference is that in the final step, a controlled Pauli-X gate is applied. This adjustment is necessary because instead of generating  $2^2$  states, we want achieve  $2^4$  states using the quantum states constructed in the previous steps. To illustrate this more clearly, I will represent the process mathematically for the case of  $N = 11$  and then extend it to  $N = 22$.
 
@@ -851,7 +852,7 @@ UQS circuit for  $N = 11$:
 
 
 
-![M11_eff](../images/2024-09-29-Q-Hackathon/M11_eff.png)
+![M11_eff](/images/2024-09-29-Q-Hackathon/M11_eff.png)
 
 
 
@@ -1114,7 +1115,7 @@ qml.draw_mpl(uqs_eff_circuit)()
 
 
 
-![M26_eff](../images/2024-09-29-Q-Hackathon/M26_eff.png)
+![M26_eff](/images/2024-09-29-Q-Hackathon/M26_eff.png)
 
 
 
@@ -1141,7 +1142,7 @@ plt.show()
 
 
 
-![M26_measure](../images/2024-09-29-Q-Hackathon/M26_measure.png)
+![M26_measure](/images/2024-09-29-Q-Hackathon/M26_measure.png)
 
 
 
