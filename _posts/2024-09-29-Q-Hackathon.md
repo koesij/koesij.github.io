@@ -1186,13 +1186,15 @@ The circuit depth is determined by the number of operations (gates) required to 
 
  The hackathon was held over three days and nights. Thanks to the support from IBM and IONQ, we were able to run our circuits on real quantum hardware and gained valuable experience in mitigating errors and analyzing the error rates and characteristics of different quantum devices.
 
- The event featured 24 teams (consisting of 101 graduate and undergraduate students) from diverse universities. We were honored to win 2nd place in the competition and were awarded at the '2024 Quantum Korea'. It was a great honor, and I truly enjoyed every moment—from brainstorming solutions to collaborating with my teammates.
+ The event featured 24 teams (consisting of 101 graduate and undergraduate students) from diverse universities. We were honored to win 2nd place in the competition and were awarded at the '2024 Quantum Korea'. It was a great honor, and I truly enjoyed every moment from brainstorming solutions to collaborating with my teammates.
 
- I would like to extend a huge thanks to the mentors and everyone who organized and participated in the event. I am especially grateful to Professor Kunwoo Kim for his lectures on 'Quantum Information and Quantum Computation'. The knowledge from those lectures, covering topics like quantum algorithms and quantum entanglement, played a significant role in helping our team tackle the problems.
+ I would like to express a huge thanks to the mentors and everyone who organized and participated in the event. I'm also grateful to Professor Kunwoo Kim for his lectures on 'Quantum Information and Quantum Computation'. The knowledge from those lectures, covering topics like quantum algorithms and quantum entanglement, played a significant role in helping our team tackle the problems.
 
- This event was a major milestone for me personally, and I am excited to continue my journey in exploring the world of quantum computing. You can see us receiving the award in [4]. 
+ This event was a major milestone for me and I'm excited to continue my journey in exploring the world of quantum computing. 
 
-For a detailed overview of the 2024 Q-Hackathon, you can watch [5].
+
+
+You can see us receiving the award in [4]. For a detailed overview of the 2024 Q-Hackathon, you can watch [5].
 
 
 
