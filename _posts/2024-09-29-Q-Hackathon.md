@@ -10,9 +10,7 @@ nav: "counts"
 Typora-root-url: ../
 ---
 
-# 2024 Quantum-Hackathon: Uniform Quantum Superposition State Preparation
-
-
+​	
 
 ​	In recent years, the field of quantum computing and quantum machine learning has advanced significantly, with new challenges emerging around the generation and utilization of quantum superposition states. As these states are central to various algorithms and processes, their optimization and creation have become a growing focus for researchers. 
 
