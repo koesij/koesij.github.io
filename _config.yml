@@ -117,7 +117,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "The breaking of a wave cannot explain the whole sea."
   location         : "Seoul, Korea"
-  email            : "chad0723@cau.ac.kr, chadsong123@gmail.com"
+  # email            : "chad0723@cau.ac.kr, chadsong123@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
