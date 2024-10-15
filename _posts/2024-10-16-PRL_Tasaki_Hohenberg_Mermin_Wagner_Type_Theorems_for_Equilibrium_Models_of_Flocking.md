@@ -18,7 +18,7 @@ sidebar: false
 
 
 
-#### Introduction and Motivation
+#### About Vicsek model
 
  The **Vicsek model** is a famous example of collective motion, where self-propelled particles align with their neighbors, forming **flocks or clusters**. This model has received attention not only for explaining biological phenomena like flocking but also for introducing **new universality classes** in statistical mechanics.
 
@@ -50,7 +50,9 @@ $u(r)=\left\{ \begin{align}
 & 0 \ \ \   \vert r \vert > a_0\\
 & \infty \ \ \   \vert r \vert \leq a_0 \\
 \end{align}
-\right.$ : A hard-core interaction potential between particles. It is infinite if particles get closer than a certain distance a_0 , ensuring they do not overlap.
+\right.$
+
+  : A hard-core interaction potential between particles. It is infinite if particles get closer than a certain distance a_0 , ensuring they do not overlap.
 
 
 
@@ -58,7 +60,9 @@ $J(r)=\left\{ \begin{align}
 & J_0 \ \ \     \vert r \vert >a_1\\
 & 0 \ \ \   \vert r \vert \leq a_1\\
 \end{align}
-\right.$ : The strength of the alignment interaction, which is non-zero only if particles $j$ and $k$ are within a distance $a_1$ .
+\right.$ 
+
+: The strength of the alignment interaction, which is non-zero only if particles $j$ and $k$ are within a distance $a_1$ .
 
 
 
@@ -93,8 +97,6 @@ This decay shows that **long-range order** does not develop in equilibrium.
 
 
 #### Conclusion
-
-
 
  The paper concludes that a **class of two-dimensional particle systems with Vicsek-type “exchange interaction” never exhibits spontaneous breakdown of rotational symmetry** in equilibrium. This means that **SSB** cannot arise in equilibrium systems like the one studied here, even with velocity alignment interactions.
 
