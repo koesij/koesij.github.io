@@ -49,6 +49,8 @@ $$
 
 
  A hard-core interaction potential between particles. It is infinite if particles get closer than a certain distance a_0 , ensuring they do not overlap:
+
+
 $$
 u(r)=\left\{ \begin{align}
 & 0 \ \ \   \vert r \vert > a_0\\
