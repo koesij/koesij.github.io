@@ -2,7 +2,7 @@
 layout: single
 title: "2024 Quantum-Hackathon: Uniform Quantum Superposition State Preparation"
 categories: ["projects"]
-tags: ["quantum", "quantum computation", "quantum encoding"]
+tags: ["quantum", "quantum computation"]
 use_math: true
 author_profile: false
 sidebar: false
