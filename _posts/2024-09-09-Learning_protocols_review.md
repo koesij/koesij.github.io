@@ -2,7 +2,7 @@
 layout: single
 title: "Learning protocols for the fast and efficient control of active matter"
 categories: ["physics read"]
-tags: ["classical", "out of equilibrium", "active matter control"]
+tags: ["classical", "out of equilibrium", "active matter"]
 use_math: true
 author_profile: false
 sidebar: false
