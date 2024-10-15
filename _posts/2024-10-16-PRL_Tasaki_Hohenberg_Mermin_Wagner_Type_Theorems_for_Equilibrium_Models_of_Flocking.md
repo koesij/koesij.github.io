@@ -42,28 +42,32 @@ The paper seeks to answer the following:
 
 The $H$ of the system is as below:
 
-$H=\sum_j\frac{m}{2}\vert v_j\vert^2+\sum_{j<k}\{u(r_j-r_k)-J(r_j-r_k)\frac{v_j}{\vert v_j \vert}\cdot\frac{v_k}{\vert v_k \vert}\}-h\sum_j \frac{v_j^x}{\vert v_j \vert}$
+
+$$
+H=\sum_j\frac{m}{2}\vert v_j\vert^2+\sum_{j<k}\{u(r_j-r_k)-J(r_j-r_k)\frac{v_j}{\vert v_j \vert}\cdot\frac{v_k}{\vert v_k \vert}\}-h\sum_j \frac{v_j^x}{\vert v_j \vert}
+$$
 
 
-
-$u(r)=\left\{ \begin{align}
+ A hard-core interaction potential between particles. It is infinite if particles get closer than a certain distance a_0 , ensuring they do not overlap:
+$$
+u(r)=\left\{ \begin{align}
 & 0 \ \ \   \vert r \vert > a_0\\
 & \infty \ \ \   \vert r \vert \leq a_0 \\
 \end{align}
-\right.$
+\right.
+$$
+ 
 
-  : A hard-core interaction potential between particles. It is infinite if particles get closer than a certain distance a_0 , ensuring they do not overlap.
+The strength of the alignment interaction, which is non-zero only if particles $j$ and $k$ are within a distance $a_1$:
 
 
-
-$J(r)=\left\{ \begin{align}
+$$
+J(r)=\left\{ \begin{align}
 & J_0 \ \ \     \vert r \vert >a_1\\
 & 0 \ \ \   \vert r \vert \leq a_1\\
 \end{align}
-\right.$ 
-
-: The strength of the alignment interaction, which is non-zero only if particles $j$ and $k$ are within a distance $a_1$ .
-
+\right.
+$$
 
 
 Unlike the Vicsek model, this Hamiltonian **does not include a self-propulsion term**. In the Vicsek model, particles move with a fixed speed in the direction of their velocity, requiring continuous energy input (i.e., non-equilibrium dynamics). In this model, particles only interact through alignment and hard-core interactions, with no built-in propulsion mechanism driving them forward.
@@ -80,7 +84,11 @@ The absence of self-propulsion fundamentally limits the ability of the system to
 
 The paper extends the **Hohenberg-Mermin-Wagner theorem** to show that, even with alignment interactions, the system **cannot break rotational symmetry** at any finite temperature:
 
-$\lim_{h \to 0} \lim_{L \to \infty} \frac{1}{N} \sum_{j=1}^N \langle v_{x,j} \rangle_{\beta, h} = 0$
+
+$$
+\lim_{h \to 0} \lim_{L \to \infty} \frac{1}{N} \sum_{j=1}^N \langle v_{x,j} \rangle_{\beta, h} = 0
+$$
+
 
 This result indicates that in equilibrium, the average velocity in the x-direction is zero, and no preferred direction emerges.
 
@@ -90,7 +98,11 @@ This result indicates that in equilibrium, the average velocity in the x-directi
 
 The correlation function for the particle velocities decays at least as a power law with distance:
 
-$C_l(\beta) = \frac{\langle v_j \cdot v_k \chi_l \rangle_{\beta, 0}}{\langle \chi_l \rangle_{\beta, 0}} \leq \left( \frac{a_0}{l} \right)^\eta$
+
+$$
+C_l(\beta) = \frac{\langle v_j \cdot v_k \chi_l \rangle_{\beta, 0}}{\langle \chi_l \rangle_{\beta, 0}} \leq \left( \frac{a_0}{l} \right)^\eta
+$$
+
 
 This decay shows that **long-range order** does not develop in equilibrium.
 
