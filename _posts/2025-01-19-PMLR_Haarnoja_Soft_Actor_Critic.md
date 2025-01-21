@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor"
 categories: ["AI read"]
 tags: ["reinforcement learning"]
 use_math: true
