@@ -85,7 +85,7 @@ By applying the Bellman backup operator iteratively, it is proven that the **Q-f
 
 Once we have an improved estimate of the Q-function, the next step is to update the policy to maximize the expected return. In SAC, the policy update is performed by minimizing the **Kullback-Leibler (KL) divergence**, ensuring that the new policy is closer to an exponential distribution of the updated Q-values:
 $$
-\pi_{\text{new}} = \arg \min_{\pi} D_{\text{KL}} \left( \pi(\cdot | \bold{s}_t) \Big\| \frac{\exp(Q^\pi(\bold{s}_t, \bold{a}_t))}{Z(\bold{s}_t)} \right)
+\pi_{\text{new}} = \arg \min_{\pi} D_{\text{KL}} \left( \pi(\cdot | \bold{s}_t) \| \frac{\exp(Q^\pi(\bold{s}_t, \bold{a}_t))}{Z(\bold{s}_t)} \right)
 $$
 This policy improvement step results in the following **inequality**, which guarantees that the updated policy achieves higher expected returns:
 $$
@@ -121,6 +121,6 @@ The update makes use of a target value network $V_{\bar{\psi}}$, where $\bar{\ps
 
 Finally, the policy parameters can be learned by directly minimizing the expected  KL-divergence as:
 $$
-J_\pi(\phi)=\mathbb{E}_{\bold{s}_t \sim \mathcal{D}}\left[D_{\text{KL}} \left( \pi(\cdot | \bold{s}_t) \Big\| \frac{\exp(Q^\pi(\bold{s}_t, \bold{a}_t))}{Z(\bold{s}_t)} \right) \right]
+J_\pi(\phi)=\mathbb{E}_{\bold{s}_t \sim \mathcal{D}}\left[D_{\text{KL}} \left( \pi(\cdot | \bold{s}_t) \| \frac{\exp(Q^\pi(\bold{s}_t, \bold{a}_t))}{Z(\bold{s}_t)} \right) \right]
 $$
 ![SAC_algorithm_flow](../images/2025-01-19-PMLR_Haarnoja_Soft_Actor_Critic/SAC_algorithm_flow.png)
