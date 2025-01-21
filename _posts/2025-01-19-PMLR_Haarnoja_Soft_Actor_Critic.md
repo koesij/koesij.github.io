@@ -115,7 +115,7 @@ J_{Q}(\theta)=\mathbb{E}_{(\bold{s}_t, \bold{a}_t)\sim\mathcal{D}}\left[\frac{1}
 $$
 with 
 $$
-\hat{Q}(\bold{s}_t,\bold{a}_t)=r(\bold{s}_t, \bold{a}_t)+\gamma\mathbb{E}_{\bold{s}_{{t+1}_\sim p}}[V_\bar{\psi}(\bold{s}_{t+1})]
+\hat{Q}(\bold{s}_t,\bold{a}_t)=r(\bold{s}_t, \bold{a}_t)+\gamma\mathbb{E}_{\bold{s}_{{t+1}\sim p}}[V_\bar{\psi}(\bold{s}_{t+1})]
 $$
 The update makes use of a target value network $V_{\bar{\psi}}$, where $\bar{\psi}$ can be an exponentially moving average of  the value network weights, which has been shown to stabilize training.
 
